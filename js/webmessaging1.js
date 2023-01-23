@@ -54,7 +54,6 @@ function Eventos() {
   btngenesysWidget.className = "oculto";
 
   Genesys("subscribe", "MessagingService.messagesReceived", function (o) {
-    //console.log("*******MessagingService.messagesReceived Inicio********");
     const mensaje = o.data.messages[0].text;
     const direction = o.data.messages[0].direction;
     if (direction == "Outbound" && ElURLdeSmartVideo(mensaje)) {
